@@ -1,0 +1,221 @@
+/* Підключення  шрифтів */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Lobster&family=Poppins:wght@400;700&display=swap");
+
+@font-face {
+    font-family: "Helvetica Neue Condensed Black";
+    src: url("../fonts/HelveticaNeue-CondensedBlack.woff2") format('woff2'),
+    url("../fonts/HelveticaNeue-CondensedBlack.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("../fonts/HelveticaNeue.woff2") format('woff2'),
+    url("../fonts/HelveticaNeue.woff2") format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ОБНУЛЕНИЕ СТИЛЕЙ */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,
+body {
+	height: 100%;
+}
+html {
+	font-size: 16px; /* по умолчанию */
+}
+body {
+	line-height: 1;
+}
+.wrapper {
+	min-height: 100%;
+	/* overflow: hidden; */
+	/* padding: 20px; */
+}
+/* Убираем лишний отступ. Вариант №1 */
+/*
+.text *:last-child {
+	margin-bottom: 0;
+}
+*/
+/* Убираем лишний отступ. Вариант №2 
+ для любых объектов внутри объектов с классом .text
+ добавить внешний отступ 20px вниз, 
+ но кроме последнего объекта
+
+.text *:not(:last-child) {
+	margin: 0px 0px 20px 0px;
+}*/
+/* ------------------------------ */
+
+.container{
+    padding: 100px;
+}
+.parent, .block {
+    padding: 50px;
+    font-size: 24px;
+    color: #000;
+    background-color:cadetblue;
+}
+.parent__item{
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+.parent__item_red{
+    background-color: red;
+    position: relative;
+    right: 100px;
+    top: 30px;
+}
+.parent__item_green{
+    background-color: seagreen;
+}
+.parent__item_orange{
+    background-color:orange;
+    position: absolute;
+    top:0px;
+    left: 0px;
+}
+.parent__item_blue{
+    width: 30%;
+    position: relative;
+    left: 150px;
+    top:25px;
+    background-color: blue;
+}
+.block{
+    position: relative;
+}
+.parent__item_yellow{
+    background-color: yellow;
+    position: relative;
+}
+.small-item{
+    background-color: palevioletred;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.parent__item_pink{
+    width: 30%;
+    background-color: palevioletred;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+/* .parent__item_purple{
+    width: 50%;
+    background-color: purple;
+    position: fixed;
+    top: 50px;
+} */
+
+.who-we-are{
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 100px 87px 300px 87px;
+    box-sizing: border-box;
+    border-radius: 40px;
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    color: #F5F5F5;
+    background: url("../img/blob.png") 45px 350px no-repeat;
+    background-color: #5D62B5;
+}
+.who-we-are::before{
+    content: "";
+    background: url("../img/stylize_circles.svg") 0 0 no-repeat;
+    width: 201px;
+    height: 317px;
+    position: absolute;
+    left: 910px;
+    top: -115px;
+}
+.who-we-are__subtitle{
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 2.5px;
+    text-align: left;
+    text-transform: uppercase;
+    position: relative;
+    padding: 0 0 0 33px;
+    margin: 0 0 33px 0;
+}
+.who-we-are__subtitle::before{
+    content: "";
+    background: url("../img/overline_mark.svg") 0 0 no-repeat;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -2px;
+    left: 0px;
+}
+.who-we-are__title{
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 42px;
+    letter-spacing: 0px;
+    text-align: left;
+    width: 583px;
+    margin: 0 0 36px 0;
+}
+.who-we-are__text{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.15000000596046448px;
+    text-align: left;
+    width: 846px;
+    margin-bottom: 54px;
+}
+.who-we-are__content{
+    position: relative;
+}
+.who-we-are__photo{
+    position: relative;
+}
+.who-we-are__photo img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 40px;
+    filter: drop-shadow(0px 8px 16px rgba(38, 38, 38, 0.24)) drop-shadow(0px 16px 24px rgba(38, 38, 38, 0.2));
+}
